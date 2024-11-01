@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "machine-status"
+version = "0.1.0"
+description = "This will give the status of existing machine at Dackricarton"
+authors = ["Danielson <danielson@sikidy.mg>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.0.3"
+jsonify = "^0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
