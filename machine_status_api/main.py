@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from datetime import datetime, timezone
 import random
 
 app = Flask(__name__)
@@ -16,8 +17,9 @@ ALLOWED_STATUSES = {"STARTED", "COMPLETED", "IDLE", "ERROR"}
 @app.route('/data', methods=['GET'])
 def get_data():
     # Process and return some machine data
-    # As an example, Rondomly set some exploitable data information
+    # As an example, Rondomly set some exploitable machine's data information
 
+    machine_data["timestamp"] = datetime.now(timezone.utc).isoformat()     # Processing time
     machine_data['status'] = random.choice(list(ALLOWED_STATUSES))
     machine_data['temperature'] = round(random.uniform(20.0, 100.0), 2)    # °C
     machine_data["fan_speed"] = round(random.uniform(0.0, 1000.0), 2)      # tr/mn
