@@ -1,4 +1,5 @@
 [tool.poetry]
+package-mode = false
 name = "machine-status"
 version = "0.1.0"
 description = "This will give the status of existing machine at Dackricarton"
@@ -9,6 +10,7 @@ readme = "README.md"
 python = "^3.11"
 Flask = "^3.0.3"
 jsonify = "^0.5"
+requests = "^2.32.3"
 
 
 [build-system]
